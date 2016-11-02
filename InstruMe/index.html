@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width"/>
+		<title>InstruMe</title>
+		<script src="assets/jquery-1.10.2.js"></script>
+		<script src="assets/jquery-ui.js"></script>
+		<script src="assets/jquery.min.js"></script>
+		<link rel="stylesheet" href="style.css"/>
+		<script>
+			$(function(){
+				$('a[href*="#"]:not([href="#"])').click(function() {
+					if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname){
+						var target = $(this.hash);
+						target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+						if (target.length){
+							$('html, body').animate({
+								scrollTop: target.offset().top
+							}, 1500);
+							return false;
+						}
+					}
+				});
+			});
+			
+			$(document).ready(function(){
+				$('.btn-menu').click(function(){
+					$('.menu ul li').slideToggle('fast');
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<header id="atas">
+			<span class="title">
+				<img class="img-atas" src="icon.png"/>
+			</span>
+			<nav class="menu">
+				<span class="btn-menu">menu</span>
+				<ul>
+					<li><a href="#bg-1">Home</a></li>
+					<li><a href="#bg-2">About Us</a></li>
+					<li><a href="#bg-3">Our Team</a></li>
+					<li><a href="#bg-4">Our Clients</a></li>
+					<li><a href="#bg-5">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<content id="tengah">
+			<div id="bg-1" class="bg-1">
+				<div style="background-color:#4d4d4d; opacity:0.95;">
+					<div class="isi">
+						<h2 class="judul">
+							<img src="icon.png" style="width:25%; opacity:1"/><br/>
+							InstruMe<br/>Partner Anda dalam Bermusik<br/><br/>
+							<a href="#bg-2" class="btn">SEE MORE</a>
+						</h2>
+						
+					</div>
+				</div>
+			</div>
+			<div id="bg-2" class="bg-info">
+				<div class="isi">
+					<h3 class="info">Info Lengkap</h3>
+					<p class="info-p">Kami adalah organisasi persewaan komersial alat musik<br/><br/>Kami menyediakan beberapa macam alat musik beragam budget<br>
+					Anda dapat memilih sesuai kebutuhan dan keinginnan Anda</p>
+				</div>
+			</div>
+			<div class="bg-2">
+				<div class="isi" style="width:100%; margin:0 auto; background-color:#ff5252; opacity:0.8;">
+					<p class="info-p1">Beberapa instrumen yang kami sediakan:<br/><br/></p>
+					<div style="margin:0 auto">
+						<table class="tb-umum" style="text-align:center;">
+							<tr>
+								<td><img class="list-instru" src="gitar.png"></td>
+								<td><img class="list-instru" src="glistrik.png"></td>
+								<td><img class="list-instru" src="bass.png"></td>
+								<td><img class="list-instru" src="piano.png"></td>
+								<td><img class="list-instru" src="drum.png"></td>
+							</tr>
+							<tr>
+								<td style="color: white">Gitar Akustik</td>
+								<td style="color: white">Gitar Listrik</td>
+								<td style="color: white">Bass</td>
+								<td style="color: white">Piano</td>
+								<td style="color: white">Drum</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div id='bg-3' class="bg-info-1">
+				<div class="isi">
+					<h3 class="info1">Our Team</h3>
+					<p class="info-p1">Kami memiliki tanggung jawab tinggi dalam upaya membantu para client kami<br/><br/>Beberapa tim yang memiliki semangat perusahaan:</p>
+					<br><br>
+					<table class="tb-umum" style="text-align:center;">
+						<tr>
+							<td><img class="list-instru" src="wajah.png"></td>
+							<td><img class="list-instru" src="wajah.png"></td>
+							<td><img class="list-instru" src="wajah.png"></td>
+						</tr>
+						<tr>
+							<td style="color: white">Norfa Bagas</td>
+							<td style="color: white">Khanif F. P.	</td>
+							<td style="color: white">Widi Satriaji</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id='bg-4' class="bg-info-1" style="background-color: #90caf9">
+				<div class="isi">
+					<h3 class="info1">We Work With</h3>
+					<p class="info-p1">Kami sudah membantu menyukseskan beberapa band tingkat nasional<br/><br/>Beberapa client loyal kami</p>
+					<br><br>
+					<table class="tb-umum" style="text-align:center;">
+						<tr>
+							<td><img class="list-instru" src="corp1.png"></td>
+							<td><img class="list-instru" src="corp2.png"></td>
+							<td><img class="list-instru" src="corp3.png"></td>
+							<td><img class="list-instru" src="corp4.png"></td>
+						</tr>
+						<tr>
+							<td style="color:white">JKT48</td>
+							<td style="color:white">TULUS</td>
+							<td style="color:white">Jakarta Beatbox</td>
+							<td style="color:white">Vierratale</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id='bg-5' class="bg-3">
+				<div class="isi" style="width:100%; margin:0 auto; background-color:#4f4f4f; opacity:0.9;">
+					<h2 class='info1'>Contact</h2>
+					<p class="info-p1">Anda dapat selalu terhubung dengan kami:<br/><br/></p>
+					<table class="tb-umum" style="text-align:center;">
+						<tr>
+							<td><img class="list-instru" src="hape.png"></td>
+							<td><img class="list-instru" src="gmail.png"></td>
+							<td><img class="list-instru" src="facebook.png"></td>
+							<td><img class="list-instru" src="ig.png"></td>
+						</tr>
+						<tr>
+							<td style="color: white">0211234567</td>
+							<td style="color: white">contact-us@instru.me</td>
+							<td style="color: white">InstruMe Music</td>
+							<td style="color: white">@instrume</td>						
+						</tr>
+					</table>
+				</div>
+			</div>
+		</content>
+
+		<footer id="bawah">
+			
+		</footer>
+
+		<script type="text/javascript">
+			$(function(){
+				var navigasi = $('header').offset().top;
+				var sticky  = function(){
+					var srolltop = $(window).scrollTop();
+					if(srolltop > navigasi){
+						$('header').addClass('fixed');
+					}
+					else{
+						$('header').removeClass('fixed');
+					}
+				};
+				sticky();
+				$(window).scroll(function(){
+					sticky();
+				});
+			});
+		</script>		
+	</body>
+</html>
